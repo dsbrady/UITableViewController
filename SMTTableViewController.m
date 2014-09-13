@@ -77,12 +77,15 @@
     // Configure the cell...
 	switch (indexPath.section) {
 		case 0:
+			cell.textLabel.textColor = [UIColor redColor];
 			cell.textLabel.text = [NSString stringWithFormat:@"I am in section %i",indexPath.section];
 			break;
 		case 1:
+			cell.textLabel.textColor = [UIColor blueColor];
 			cell.textLabel.text = @"Another section";
 			break;
 		case 2:
+			cell.textLabel.textColor = [UIColor yellowColor];
 			cell.textLabel.text = [NSString stringWithFormat:@"Cell %i",indexPath.row];
 			break;
 		default:
