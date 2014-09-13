@@ -46,26 +46,52 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+	switch (section) {
+		case 0:
+			return 2;
+			break;
+		case 1:
+			return 1;
+			break;
+		case 2:
+			return 3;
+			break;
+		default:
+			return 0;
+			break;
+	}
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+	static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+	switch (indexPath.section) {
+		case 0:
+			cell.textLabel.text = [NSString stringWithFormat:@"I am in section %i",indexPath.section];
+			break;
+		case 1:
+			cell.textLabel.text = @"Another section";
+			break;
+		case 2:
+			cell.textLabel.text = [NSString stringWithFormat:@"Cell %i",indexPath.row];
+			break;
+		default:
+			return 0;
+			break;
+	}
+
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
