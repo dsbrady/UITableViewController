@@ -1,5 +1,5 @@
 //
-//  SMTViewController.h
+//  SMTTableViewController.h
 //  UITableViewController Challenge
 //
 //  Created by Scott Brady on 9/13/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SMTViewController : UIViewController
+@interface SMTTableViewController : UITableViewController
 
 @end
